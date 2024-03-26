@@ -1,0 +1,381 @@
+/*https://www.clipartmax.com/max/m2i8i8Z5d3Z5i8G6/*/
+/*ToFix - ID/NAME Fade-in*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+#page{
+    width: auto;
+    max-width: 1500px;
+    margin: auto;
+}
+#part1{
+    
+    border: 2px solid black;
+    height: 400px;
+    margin-bottom: 20px;
+}
+#part2{
+    
+    border: 2px solid black;
+    height: auto;
+    width: auto;
+    float: right;
+    margin: auto;
+}
+#part3{
+    
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+   ;
+    margin: auto;
+}
+#links{
+    
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+    float: left;
+}
+table{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+
+}
+thead{
+    color: black;
+}
+tr{
+    border-bottom: 1px #ddd;
+}
+th {
+    padding: 8px 8px 8px 16px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+th.third {
+    width: 33.3333%;
+}
+tbody tr:nth-child(even){
+    background-color: #f1f1f1;
+}
+/*---------------------Part 1---------------------------*/
+
+/* Scene 1*/
+#part1Wrapper {
+    width: 800px;
+    height: 300px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#part1Scene1 {
+    visibility: hidden;
+    animation-name: part1Scene1;
+    animation-duration: 7s;
+}
+
+#part1Scene1Background img {
+    position: absolute;
+    height: 300px;
+    width: 1000px;
+    left: -200px;
+
+    animation-name: part1BackgroundPan;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+}
+
+#part1Scene1Text1{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Lucida Sans';
+    font-size: 60px;
+    top: 20px;
+    left: 300px; 
+    position: absolute;
+
+    animation-name: part1FadeLoop;
+    animation-duration: 3.5s;
+    animation-iteration-count: 2;
+
+}
+#part1Scene1Text2{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: 60px;
+    top: 20px;
+    left: 200px; 
+    position: absolute;
+
+    animation-name: part1FadeLoopInverted;
+    animation-duration: 3.5s;
+    animation-iteration-count: 2;
+}
+
+#part1Scene1Text3{
+    color: rgb(56, 185, 218);
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+    top: 200px;
+    left: 600px; 
+    position: absolute;
+    animation-name: part1EnlargeFont;
+    animation-duration: 7s;
+}
+
+/* Tranisition Scene */
+#part1Transition {
+    visibility: visible;
+}
+
+#part1TransitionSceneBG img{
+    position: absolute;
+    height: 400px;
+    width: 310px;
+    left: -233px;
+    animation-name: part1Wave;
+    animation-duration: 2.65s;
+    animation-delay: 4.8s;
+    animation-timing-function: linear;
+    
+}
+/* Scene 2 */
+#part1Scene2 {
+    visibility: hidden;
+    animation-name: part1Scene2;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+
+#part1Scene2Background img{
+    position: absolute;
+    height: 400px;
+    width: 1000px;
+    animation-name: part1Background-zoom;
+    animation-delay: 6s;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    
+}
+
+#part1Scene2Text1{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Lucida Sans';
+    font-size: 60px;
+    top: 20px;
+    left: 300px; 
+    position: absolute;
+
+    animation-name: part1FadeLoop;
+    animation-duration: 3.5s;
+    animation-iteration-count: 2;
+    animation-delay: 7s;
+
+}
+#part1Scene2Text2{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Lucida Sans';
+    font-size: 60px;
+    top: 20px;
+    left: 250px; 
+    opacity: 0;
+    position: absolute;
+
+    animation-name: part1FadeLoopInverted;
+    animation-duration: 3.5s;
+    animation-iteration-count: 2;
+    animation-delay: 7s;
+
+}
+#part1Scene2Text3{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Lucida Sans';
+    font-size: 40px;
+    top: -40px;
+    left: 500px; 
+    position: absolute;
+    animation-name: part1TextDrop;
+    animation-duration: 6s;
+    animation-delay: 8s;
+}
+
+/* Name and ID*/
+#part1Name{
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    top: 5px;
+    left: 50px; 
+    position: absolute;
+    animation-name: part1TextFadeIn;
+    animation-duration: 1s;
+    animation-delay: 14s;
+
+}
+#part1ID{
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    top: 5px;
+    left: 230px; 
+    position: absolute;
+    animation-name: part1TextFadeIn;
+    animation-duration: 1s;
+    animation-delay: 14s;
+}
+
+
+
+@keyframes part1BackgroundPan {
+    0%{
+        transform: translateX(0px);
+    }70%{
+        transform: translateX(150px);
+    }
+          
+    100%{
+        transform: translateX(1000px);
+    }
+}
+    
+
+@keyframes part1Background-zoom{
+    0%{
+        transform: scale(1);
+    }75%{
+        transform: scale(1.2);
+    }100%{
+        transform: scale(1.2);
+    }
+}
+@keyframes part1Scene1 {
+    0%{
+        visibility: visible;
+    }
+        
+    95%{
+        visibility: visible;
+            
+    }
+    100%{       
+        visibility: hidden;       
+    }
+    
+}
+@keyframes part1FadeLoop {
+    0%{
+        opacity: 1;
+    }50%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }   
+}
+@keyframes part1FadeLoopInverted {
+    0%{
+        opacity: 0;
+    }50%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+    }   
+}
+@keyframes part1Wave{
+    0%{
+        transform: translateX(0px);
+    }  
+    90%{
+        transform: translateX(1050px);
+    }      
+    100%{
+        transform: translateX(1100px);
+    }
+}
+@keyframes part1EnlargeFont{
+    0%{
+        transform: scale(0);
+    }65%{
+        transform: scale(1);
+    }80%{
+        opacity: 1;
+        transform: scale(1);
+    }95%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }   
+}
+@keyframes part1TextDrop{
+    0%{
+        transform: translateY(0px);
+        color: white;
+    }16%{
+        transform: translateY(280px);
+        color: rgb(56, 185, 218);
+    }
+    100%{
+        transform: translateY(280px);
+    }
+}
+@keyframes part1TextFadeIn{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}  
+
+@keyframes part1Scene2 {
+    0%{
+        visibility: hidden;
+    }
+    
+    28%{visibility: hidden;
+
+    }  
+    30%{
+        visibility: visible;
+                   
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{       
+        visibility: hidden; 
+        opacity: 0;
+              
+    }
+    
+}
+
+/*--------------------------------Part 2---------------------------------*/
+#part2Wrapper{
+    width: 400px;
+    height: 800px;
+    background-color: orangered;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+
+}
