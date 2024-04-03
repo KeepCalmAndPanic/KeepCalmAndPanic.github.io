@@ -28,9 +28,10 @@ html {
 #part3{
     
     border: 2px solid black;
-    height: 400px;
-    width: 400px;
-   ;
+    height: auto;
+    width: 600px;
+    height: 600px;
+   
     margin: auto;
 }
 #links{
@@ -377,5 +378,428 @@ tbody tr:nth-child(even){
     margin: auto;
     position: relative;
     overflow: hidden;
+    
+    
 
+}
+/*Scene 1*/
+#part2Scene1{
+    visibility: hidden;
+    animation-name: part2Scene1;
+    animation-duration: 3s;
+
+}
+#part2Scene1BG img{
+    position: absolute;
+    height: 800px;
+    width: 1200px;
+    left: -200px;
+    animation-name: part2Scene1BGPan;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+
+#part2Scene1Text1{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    text-align: left;
+    word-wrap:normal;
+    font-size: 40px;
+    top: 100px;
+    left: 20px;
+    text-shadow: 2px 2px 4px white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+/*Scene 2*/
+#part2Scene2{
+    visibility: hidden;
+    animation-name: part2Scene2;
+    animation-duration: 4.5s;
+    animation-delay: 2s;
+}
+
+#part2Scene2BG img{
+    position: absolute;
+    height: 800px;
+    width: 1200px;
+    left: 400px;
+    animation-name: part2Scene2BGPan;
+    animation-duration: 4.5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+#part2Scene2Text1{
+   
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    text-align: left;
+    word-wrap:normal;
+    font-size: 40px;
+    top: 200px;
+    left: 20px;
+    text-shadow: 2px 2px 4px white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*Scene 3*/
+#part2Scene3{
+    visibility: hidden;
+    animation-name: part2Scene3;
+    animation-duration: 4s;
+    animation-delay: 5.5s;
+}
+
+#part2Scene3BG img{
+    position: absolute;
+    height: 800px;
+    width: 1200px;
+    left: 400px;
+    animation-name: part2Scene3BGPan;
+    animation-duration: 4s;
+    animation-delay: 5.5s;
+    animation-timing-function: linear;
+    
+}
+
+#part2Scene3Text1{
+
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    text-align: left;
+    word-wrap:normal;
+    font-size: 40px;
+    top: 220px;
+    left: 20px;
+    text-shadow: 2px 2px 4px white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*Scene 4*/
+#part2Scene4{
+    visibility: hidden;
+    animation-duration: 6.5s;
+    animation-delay: 9s;
+    animation-name: part2Scene4;
+ 
+}
+#part2Scene4BG{
+    position: absolute;
+    height: 800px;
+    width: 400px;
+    left: 400px;
+    background-color: orangered;
+
+    animation-name: part2Scene4BGPan;
+    animation-duration: 6.5s;
+    animation-delay: 9s;
+    animation-timing-function: linear;
+
+}
+
+#part2Scene4Text1{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    text-align: left;
+    word-wrap:normal;
+    font-size: 60px;
+    top: 180px;
+    left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: part2Scene4TextFadeIn;
+    animation-duration: 5s;
+    animation-delay: 10s;
+}
+
+#part2Scene4Text2{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    text-align: left;
+    word-wrap:normal;
+    font-size: 60px;
+    top: 240px;
+    left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: part2Scene4TextFadeIn;
+    animation-duration: 5s;
+    animation-delay: 10s;
+    color: white;
+}
+
+#part2Scene4Text3{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    word-wrap:normal;
+    font-size: 20px;
+    top: 730px;
+    left: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: part2Scene4TextFadeIn;
+    animation-duration: 4s;
+    animation-delay: 11s;
+    color: white;
+    background-color: black;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#part2Logo img{
+    position: absolute;
+    height: 50px;
+    width: 150px;
+    top: 700px;
+    left: 250px;
+}
+/* Replay button and ID*/
+#part2Replay{
+    visibility: visible;
+    animation-name: part2Replay;
+    animation-duration: 15s;
+}
+#part2ReplayButton{
+    position: absolute;
+    left: 150px;
+    top: 350px;
+    font-size: 50px;
+}
+#part2NameID{
+    position: absolute;
+    left: 100px;
+    font-size: 20px;
+    
+
+}
+
+/*Animations
+    Scene 1*/
+@keyframes part2Scene1 {
+    0%{
+        visibility: visible;
+    }
+    95%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes part2Scene1BGPan{
+    0%{
+        transform: translateX(0px);
+    }   
+    100%{   
+        transform: translateX(-100px);
+    }
+}
+
+/* Scene 2*/
+@keyframes part2Scene2 {
+    0%{
+        visibility: visible;
+    }
+    95%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+
+@keyframes part2Scene2BGPan {
+    0%{
+        left: 400px;
+    }15%{
+        left: 0px;
+    }  
+    100%{   
+        left: -100px
+    }
+}
+/*Scene 3 */
+@keyframes part2Scene3 {
+    0%{
+        visibility: visible;
+    }
+    95%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes part2Scene3BGPan {
+    0%{
+        left: 400px;
+    }15%{
+        left: 0px;
+    }  
+    100%{   
+        left: -100px
+    }
+}
+/*Scene 4*/
+@keyframes part2Scene4 {
+    0%{
+        visibility: visible;
+    }
+       
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes part2Scene4BGPan {
+    0%{
+        left: 400px;
+    }5%{
+        left: 0px;
+    }  
+    100%{   
+        left: 0px
+    }
+}
+@keyframes part2Scene4TextFadeIn {
+    0%{
+        opacity: 0;
+    }20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+/* Replay button and ID*/
+@keyframes part2Replay {
+    0%{
+        visibility: hidden;
+    }99%{
+        visibility: hidden;
+    }100%{
+        visibility: visible;
+    }
+    
+}
+/* --------------------------------Part 3----------------------------------- */
+#formContainer{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#formContainer .row{
+    float: left;
+    padding: 8px 8px 2px 0px;
+    width: 100%;
+    
+}
+#bookingSummary{
+    text-align: left;
+    margin-left: 10%;
+}
+.next {
+    float: right;
+}
+.previous {
+    float :left;
+}
+#formContainer button{
+    margin: 4px;
+    width: 20%;
+}
+progress {
+    width: 70%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#formSubTitle{
+    
+    font-size: 40px;   
+}
+label input[type="text"] {
+    width: 50%;
+    margin-right: 25%;
+    float: right;
+}
+label input[type="datetime-local"] {
+    width: 50%;
+    margin-right: 25%;
+    float: right;
+}
+label input[type="range"] {
+    width: 50%;
+    margin-right: 25%;
+    float: right;
+}
+label input[type="number"] {
+    
+    margin-right: 25%;
+    float: right;
+}
+label input[type="checkbox"] {
+    margin-left: 25%;
+    float: left;
+}
+.formNavigation {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color:lightsteelblue;
+    width: 100%;
+}
+#conservationAgreement{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: dashed;
+}
+#inputEquipment{
+    text-align: left;
+    margin-left: 10%;
+}
+#cookingInput{
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+#emailInput{
+    margin-top: 5%;
+}
+#equipmentSummary{
+    margin: auto;
+    width: 70%;
+}
+#goggleColour{
+    float: right;
+    width: 20px;
+    height: 15px;
+    margin: 2px;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    
 }
