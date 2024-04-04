@@ -1,5 +1,3 @@
-/*https://www.clipartmax.com/max/m2i8i8Z5d3Z5i8G6/*/
-/*ToFix - ID/NAME Fade-in*/
 html {
     box-sizing: border-box;
 }
@@ -14,7 +12,6 @@ html {
 #part1{
     
     border: 2px solid black;
-    height: 400px;
     margin-bottom: 20px;
 }
 #part2{
@@ -27,44 +24,51 @@ html {
 }
 #part3{
     
-    border: 2px solid black;
-    height: auto;
-    width: 600px;
-    height: 600px;
    
-    margin: auto;
+    
+    height: auto;
+    width: 650px;
+    float: left;
+   
 }
 #links{
     
     border: 2px solid black;
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: auto;
     float: left;
+    margin-right: 5%;
+    margin-left: auto;
 }
-table{
-    border: 1px solid #ccc;
+#links table{
+    border: 4px solid #ccc;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
 
 }
-thead{
+#links thead{
     color: black;
+    border-bottom: black solid 1px;
 }
-tr{
+#links tr{
     border-bottom: 1px #ddd;
 }
-th {
-    padding: 8px 8px 8px 16px;
+#links th {
+    padding: 4px 4px 4px 8px;
     display: table-cell;
     text-align: left;
     vertical-align: top;
+    font-size: 30px;
+
 }
-th.third {
-    width: 33.3333%;
+#links td {
+    padding-left: 8px;
+    font-size: 20px;
 }
-tbody tr:nth-child(even){
+
+#links tbody tr:nth-child(odd){
     background-color: #f1f1f1;
 }
 /*---------------------Part 1---------------------------*/
@@ -705,20 +709,50 @@ tbody tr:nth-child(even){
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
-    width: 100%;
-    height: 100%;
+    height: 650px;
+    width: 700px;
     text-align: center;
+    box-shadow: 2px 2px 4px darkgray;
 }
 #formContainer .row{
     float: left;
     padding: 8px 8px 2px 0px;
     width: 100%;
     
+    
+}
+#formContainer .half-row{
+    float: left;
+    padding: 8px 8px 8px 8px;
+    width: 50%;
+    
+}
+#formContainer .right-half-row{
+    float: right;
+    padding: 8px 8px 8px 8px;
+    width: 50%;
+    
+}
+#formContainer .quarter-row{
+    float: left;
+    padding: 8px 8px 2px 0px;
+    width: 25%;
+    
+}
+#formContainer .quarter-row-right{
+    float: left;
+    padding: 8px 8px 2px 0px;
+    width: 25%;
+    
 }
 #bookingSummary{
-    text-align: left;
-    margin-left: 10%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 2px 2px 4px darkgray;
+    
+    height: 400px;
+
 }
 .next {
     float: right;
@@ -792,6 +826,7 @@ label input[type="checkbox"] {
 #equipmentSummary{
     margin: auto;
     width: 70%;
+    
 }
 #goggleColour{
     float: right;
@@ -802,4 +837,24 @@ label input[type="checkbox"] {
     border-width: 1px;
     border-style: solid;
     
+}
+#equipmentSummary table{
+    border: solid black 1px;
+    float: right;
+}
+#equipmentSummary td{
+   border-bottom: black solid 2px;
+}
+#cookingSummary legend{
+    font-weight: bold;
+}
+#formPage5 h2{
+    font-size: 30px;
+    color: dimgray;
+}
+#inputDate {
+   
+    height: 100px;
+    width: 90%;
+    margin: auto;
 }

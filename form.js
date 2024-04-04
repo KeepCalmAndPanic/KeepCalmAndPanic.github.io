@@ -19,8 +19,8 @@ function getFormData(){
 
     const fName = document.getElementById("firstName").value;
     const lName = document.getElementById("lastName").value;
-    const startDate = document.getElementById("startDate").value;
-    const leaveDate = document.getElementById("leaveDate").value;
+    const startDate = new Date(document.getElementById("startDate").value);
+    const leaveDate = new Date(document.getElementById("leaveDate").value);
     const agreement = page1.querySelector("input[name=conservationAgreement]:checked").value;
     
     const roomType = page2.querySelector("select").value;
@@ -39,12 +39,17 @@ function getFormData(){
     const microwave = document.getElementById("microwave").checked;
     const email = document.getElementById("email").value;
 
+    const startDateString = startDate.getDate() + "/" + startDate.getMonth() +" "+ 
+        startDate.getHours() + ":" + startDate.getMinutes();
+    const leaveDateString = leaveDate.getDate() + "/" + leaveDate.getMonth() +" "+ 
+    leaveDate.getHours() + ":" + leaveDate.getMinutes();
     
 
     return data = {
         name: fName + " " + lName,
-        stayLength: startDate + " to " + leaveDate,
+        stayLength: startDateString + " to " + leaveDateString,
         agreement: agreement,
+        
 
         roomType: roomType,
         totalGuests: "There are " +adults+" adults and " + children + " children booked to stay.",
@@ -84,38 +89,41 @@ function submitData(){
 
     var equipment ="";
     if(data.surfBoards > 0){
-        equipment = equipment + "<div class=\"row\">Surfboards: " + data.surfBoards + "</div>";
+        equipment = equipment + "<tr><td>Surfboards</td><td>" + data.surfBoards +"</td></tr>";
     }
     if(data.umbrellas > 0){
-        equipment = equipment + "<div class=\"row\">Beach Umbrellas: " + data.umbrellas + "</div>";
+        equipment = equipment + "<tr><td>Beech Umbrellas</td><td>" + data.umbrellas +"</td></tr>";
     }
     if(data.towels > 0){
-        equipment = equipment + "<div class=\"row\">Towels: " + data.towels + "</div>";
+        equipment = equipment + "<tr><td>Towels</td><td>" + data.towels +"</td></tr>";
     }
     if(data.goggles > 0){
-        equipment = equipment + "<div class=\"row\">Goggles: " + data.goggles + 
-            "   Colour: <div id=\"goggleColour\" style=\"background-color: "+ data.gogglesColor +"\"></div></div>";
+        equipment = equipment + "<tr><td>Goggles</td><td>" + data.goggles +"</td></tr>";
+
+    }
+    if(data.goggles > 0){
+        equipment = equipment + "<tr><td>Goggle Colour</td><td style=\"background-color:"+ data.gogglesColor+"\"></td></tr>";
 
     }
     if(equipment.length > 0){
-        summaryEquipment.innerHTML = "<fieldset style=\"width: 50%\"><legend>Equipment Booked</legend>" + equipment+"</fieldset>";
+        summaryEquipment.innerHTML = "<table><thead><th>Equipment</th><th>Quanitity</th></thead>" + equipment +"</table>";
     }
 
     var cooking ="";
     if(data.gas){
-        cooking = cooking + "Gas Stovetop, ";
+        cooking = cooking + "<div class=\"row\">Gas Stovetop</div>";
     }
     if(data.bbq){
-        cooking = cooking + "BBQ, ";
+        cooking = cooking + "<div class=\"row\">BBQ</div>";
     }
     if(data.microwave){
-        cooking = cooking + "Microwave, ";    
+        cooking = cooking + "<div class=\"row\">Microwave</div>";    
     }
     if(data.oven){   
-        cooking = cooking + "Oven ";
+        cooking = cooking + "<div class=\"row\">Oven</div>";
     }
     if(cooking.length > 0){
-        summaryCooking.innerHTML = "Cooking facitilies needed: " + cooking;
+        summaryCooking.innerHTML = "<fieldset style=\"text-align:center\"><legend>Cooking facitilies needed</legend>" + cooking +"</legend>";
     }
   
 

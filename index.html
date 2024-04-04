@@ -1,6 +1,11 @@
 <!--https://pixabay.com/photos/woman-man-kitchen-food-preparation-1979272/
     https://pixabay.com/photos/architecture-interior-furniture-1171462/
-    https://pixabay.com/photos/kitchen-interior-design-room-home-1940174/ -->
+    https://pixabay.com/photos/kitchen-interior-design-room-home-1940174/ 
+    https://www.clipartmax.com/max/m2i8i8Z5d3Z5i8G6/
+    https://www.piha.co.nz/wp-content/uploads/2010/10/ISA-World-Junior-Surfing-2.jpg
+    https://www.piha.co.nz/wp-content/uploads/2010/10/Lion-Rock-1.jpg
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,17 +108,29 @@
         <div id="linksTable">
             <table>
                 <thead><th>Description</th><th>Link</th></thead>
-                <tr><td>Index</td><td>Index link</td></tr>
-                <tr><td>Index</td><td>Index link</td></tr>
-                <tr><td>Index</td><td>Index link</td></tr>
-                <tr><td>Index</td><td>Index link</td></tr>
+                <tr>
+                    <td>Index Page Wireframe</td>
+                    <td><a href="./Index wireframe.drawio.pdf">Click</a></td>
+                </tr>
+                <tr>
+                    <td>Part 1 StoryBoard</td>
+                    <td><a href="./part1StoryBoard.pdf">Click</a></td>
+                </tr>
+                <tr>
+                    <td>Part 2 StoryBoard</td>
+                    <td><a href="./part2StoryBoard.drawio.pdf">Click</a></td>
+                </tr>
+                <tr>
+                    <td>Part 3 Wireframe</td>
+                    <td><a href="./part3 WireFrame.drawio.pdf">Click</a></td>
+                </tr>
                 
             </table>
         </div>
     </section>
     <section id="part3">
         <div id="formContainer">
-            <subtitle id="formSubTitle">Book a Stay</subtitle>
+            <div class="row"><subtitle id="formSubTitle">Book a Stay</subtitle></div>
             <progress value="0" max="4"></progress>
 
 
@@ -132,7 +149,7 @@
 
                 <div id="inputDate">
                     <label for="startDate" class="row">
-                        Please select arrival date
+                            Please select arrival date
                         <input type="datetime-local" name="startDate" id="startDate">
                     </label>
                     <label for="leaveDate" class="row">
@@ -283,14 +300,19 @@
             <div id="formPage5" style="display:none">
                 <h2>Summary</h2>
                 <div id="bookingSummary">
-                    
-                    <div class="row">Name: <span id="summaryName"></span></div>
-                    <div class="row">Email: <span id="summaryEmail"></span></div>
-                    <div class="row">Duration of stay: <span id="summaryStay"></span></div>
-                    <div class="row">Guests: <span id="summaryGuests"></span></div>
-                    <div class="row">Room booked: <span id="summaryRoom"></span></div>
-                    <div id="equipmentSummary"></div> 
-                    <div class="row" id="cookingSummary"></div>  
+                    <div class="row">
+                        <div class="quarter-row">Name: <span id="summaryName"></span></div>
+                        <div class="quarter-row-right">Email: <span id="summaryEmail"></span></div>
+                        <div class="half-row-right">Duration of stay: <span id="summaryStay"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="half-row">Room booked: <span id="summaryRoom"></span></div>
+                        <div class="half-row-right"><span id="summaryGuests"></span></div>
+                    </div>
+                    <div class="row">
+                    <div class="half-row" id="cookingSummary"></div>  
+                    <div class="half-row-right"><div id="equipmentSummary"></div></div>
+                    </div>
                     <div class="row"><span id="agreementSummary"></span></div>
                 </div>
                 <div class="formNavigation">
@@ -300,11 +322,15 @@
                     
                 </div>
             </div>
-            <button type="button" onclick="test()">Test</button>
+        
         </div>
         
         <script src="./form.js"></script>
     </section>
- </div>   
+ </div>  
+
+   
+    
+
 </body>
 </html>
