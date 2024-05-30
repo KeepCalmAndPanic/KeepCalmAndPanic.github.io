@@ -1,860 +1,259 @@
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-#page{
-    width: auto;
-    max-width: 1500px;
-    margin: auto;
-}
-#part1{
-    
-    border: 2px solid black;
-    margin-bottom: 20px;
-}
-#part2{
-    
-    border: 2px solid black;
-    height: auto;
-    width: auto;
-    float: right;
-    margin: auto;
-}
-#part3{
-    
-   
-    
-    height: auto;
-    width: 650px;
-    float: left;
-   
-}
-#links{
-    
-    border: 2px solid black;
-    height: auto;
-    width: auto;
-    float: left;
-    margin-right: 5%;
-    margin-left: auto;
-}
-#links table{
-    border: 4px solid #ccc;
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
 
-}
-#links thead{
-    color: black;
-    border-bottom: black solid 1px;
-}
-#links tr{
-    border-bottom: 1px #ddd;
-}
-#links th {
-    padding: 4px 4px 4px 8px;
-    display: table-cell;
-    text-align: left;
-    vertical-align: top;
-    font-size: 30px;
-
-}
-#links td {
-    padding-left: 8px;
-    font-size: 20px;
-}
-
-#links tbody tr:nth-child(odd){
+body{
     background-color: #f1f1f1;
 }
-/*---------------------Part 1---------------------------*/
 
-/* Scene 1*/
-#part1Wrapper {
-    width: 800px;
-    height: 300px;
-    background-color: aqua;
+main {
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    max-width: 1500px;
+    min-height: 1200px;
+    background-color: #fff;
+    border-radius: 0.5em
+    
+}
+nav ul{
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px 5px;
+    background-color: black;
+}
+nav li{
+    display: inline;
+    border-right: 1px solid white;
 }
 
-#part1Scene1 {
-    visibility: hidden;
-    animation-name: part1Scene1;
-    animation-duration: 7s;
+
+nav li:last-child{
+    border-right: none;
 }
-
-#part1Scene1Background img {
-    position: absolute;
-    height: 300px;
-    width: 1000px;
-    left: -200px;
-
-    animation-name: part1BackgroundPan;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-}
-
-#part1Scene1Text1{
+nav li a{
     color: white;
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Lucida Sans';
-    font-size: 60px;
-    top: 20px;
-    left: 300px; 
-    position: absolute;
-
-    animation-name: part1FadeLoop;
-    animation-duration: 3.5s;
-    animation-iteration-count: 2;
-
+    padding: 10px 10px;
+    font-size: 20px;
+    text-decoration: none; 
 }
-#part1Scene1Text2{
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Times New Roman', Times, serif; 
-    font-size: 60px;
-    top: 20px;
-    left: 200px; 
-    position: absolute;
-
-    animation-name: part1FadeLoopInverted;
-    animation-duration: 3.5s;
-    animation-iteration-count: 2;
+nav li a:hover{
+    background-color: black;
+    font-size: 22px;
 }
 
-#part1Scene1Text3{
-    color: rgb(56, 185, 218);
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Lucida Sans';
+#titleBG{
+    background-image: url("piha.jpg");
+    background-size: cover;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 0.5em;
+}
+
+
+#titleBG h1{
+    text-align: left;
     font-size: 40px;
-    top: 200px;
-    left: 600px; 
-    position: absolute;
-    animation-name: part1EnlargeFont;
-    animation-duration: 7s;
+    margin: 20px;
 }
 
-/* Tranisition Scene */
-#part1Transition {
-    visibility: visible;
-}
-
-#part1TransitionSceneBG img{
-    position: absolute;
-    height: 400px;
-    width: 310px;
-    left: -233px;
-    animation-name: part1Wave;
-    animation-duration: 2.65s;
-    animation-delay: 4.8s;
-    animation-timing-function: linear;
-    
-}
-/* Scene 2 */
-#part1Scene2 {
-    visibility: hidden;
-    animation-name: part1Scene2;
-    animation-duration: 14s;
-    animation-delay: 0s;
-}
-
-#part1Scene2Background img{
-    position: absolute;
-    height: 400px;
-    width: 1000px;
-    animation-name: part1Background-zoom;
-    animation-delay: 6s;
-    animation-duration: 8s;
-    animation-timing-function: linear;
-    
-}
-
-#part1Scene2Text1{
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Lucida Sans';
-    font-size: 60px;
-    top: 20px;
-    left: 300px; 
-    position: absolute;
-
-    animation-name: part1FadeLoop;
-    animation-duration: 3.5s;
-    animation-iteration-count: 2;
-    animation-delay: 7s;
-
-}
-#part1Scene2Text2{
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Lucida Sans';
-    font-size: 60px;
-    top: 20px;
-    left: 250px; 
-    opacity: 0;
-    position: absolute;
-
-    animation-name: part1FadeLoopInverted;
-    animation-duration: 3.5s;
-    animation-iteration-count: 2;
-    animation-delay: 7s;
-
-}
-#part1Scene2Text3{
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    font-family: 'Lucida Sans';
-    font-size: 40px;
-    top: -40px;
-    left: 500px; 
-    position: absolute;
-    animation-name: part1TextDrop;
-    animation-duration: 6s;
-    animation-delay: 8s;
-}
-
-/* Name and ID*/
-#part1Name{
-    color: black;
-    text-shadow: 2px 2px 4px white;
-    font-family:Arial, Helvetica, sans-serif;
+#part1 h1{
+    text-align: center;
     font-size: 30px;
-    top: 5px;
-    left: 50px; 
-    position: absolute;
-    animation-name: part1TextFadeIn;
-    animation-duration: 1s;
-    animation-delay: 14s;
-
 }
-#part1ID{
-    color: black;
-    text-shadow: 2px 2px 4px white;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    top: 5px;
-    left: 230px; 
-    position: absolute;
-    animation-name: part1TextFadeIn;
-    animation-duration: 1s;
-    animation-delay: 14s;
-}
-
-
-
-@keyframes part1BackgroundPan {
-    0%{
-        transform: translateX(0px);
-    }70%{
-        transform: translateX(150px);
-    }
-          
-    100%{
-        transform: translateX(1000px);
-    }
-}
-    
-
-@keyframes part1Background-zoom{
-    0%{
-        transform: scale(1);
-    }75%{
-        transform: scale(1.2);
-    }100%{
-        transform: scale(1.2);
-    }
-}
-@keyframes part1Scene1 {
-    0%{
-        visibility: visible;
-    }
-        
-    95%{
-        visibility: visible;
-            
-    }
-    100%{       
-        visibility: hidden;       
-    }
-    
-}
-@keyframes part1FadeLoop {
-    0%{
-        opacity: 1;
-    }50%{
-        opacity: 0;
-    }100%{
-        opacity: 1;
-    }   
-}
-@keyframes part1FadeLoopInverted {
-    0%{
-        opacity: 0;
-    }50%{
-        opacity: 1;
-    }100%{
-        opacity: 0;
-    }   
-}
-@keyframes part1Wave{
-    0%{
-        transform: translateX(0px);
-    }  
-    90%{
-        transform: translateX(1050px);
-    }      
-    100%{
-        transform: translateX(1100px);
-    }
-}
-@keyframes part1EnlargeFont{
-    0%{
-        transform: scale(0);
-    }65%{
-        transform: scale(1);
-    }80%{
-        opacity: 1;
-        transform: scale(1);
-    }95%{
-        opacity: 0;
-        transform: scale(1);
-    }
-    100%{
-        opacity: 0;
-        transform: scale(1);
-    }   
-}
-@keyframes part1TextDrop{
-    0%{
-        transform: translateY(0px);
-        color: white;
-    }16%{
-        transform: translateY(280px);
-        color: rgb(56, 185, 218);
-    }
-    100%{
-        transform: translateY(280px);
-    }
-}
-@keyframes part1TextFadeIn{
-    0%{
-        opacity: 0;
-    }100%{
-        opacity: 1;
-    }
-}  
-
-@keyframes part1Scene2 {
-    0%{
-        visibility: hidden;
-    }
-    
-    28%{visibility: hidden;
-
-    }  
-    30%{
-        visibility: visible;
-                   
-    }
-    95%{
-        opacity: 1;
-    }
-    100%{       
-        visibility: hidden; 
-        opacity: 0;
-              
-    }
-    
-}
-
-/*--------------------------------Part 2---------------------------------*/
-#part2Wrapper{
+#bookingForm{
+    float: left;
     width: 400px;
     height: 800px;
-    background-color: orangered;
-    margin: auto;
+    font-size: 18px;
+    margin-left: 20px;
+}
+#bookingForm ul{
+    list-style-type: decimal;
+}
+
+#inputForm .row{
+    width: 100%;
+    float: left;
+    padding: 8px 8px 2px 4px;
+
+}
+#inputForm .row input[type="date"]{
+    float: right;
+    width: 60%;
+    
+}
+#inputForm .row input[type="number"]{
+    float: right;
+    width: 15%;
+    margin-right: 45%;
+    
+}
+#bookingSubmit{
+    width: 30%;
+    height: 30px;
+    margin-left: 30%;
+    background-color:aquamarine;
+    color: black;
+}
+
+#totalCost{
+    text-align: center;
+}
+
+
+
+#map, #summaryPicture{
+    float: right;
+    width: 990px;
+    height: 800px;
     position: relative;
-    overflow: hidden;
+
+}
+#mapimg{
+    object-fit: contain;  
+    width: 100%;
+    height: 100%;
+}
+.icon{
+    position: absolute;
+    background-color: grey;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    color: azure;
+    border: solid 4px black;
+}
+#lodge1, #lodge2, #lodge3, #lodge4, #lodge5{
+    width: 65px;
+    height: 45px;
+    line-height: 45px;
+
+}
+
+#lodge1, #lodge1Details{
+    left: 535px;
+    top: 2px;
+}
+#lodge2, #lodge2Details{
+    left: 535px;
+    top: 54px;
+}
+#lodge3,#lodge3Details{
+    left: 635px;
+    top: 2px;
+}
+#lodge4,#lodge4Details{
+    left: 635px;
+    top: 54px;
+}
+#lodge5,#lodge5Details{
+    left: 635px;
+    top: 115px;
+}
+
+#lodge6, #lodge7{
+    width: 135px;
+    height: 95px;
     
-    
-
+    line-height: 95px;
 }
-/*Scene 1*/
-#part2Scene1{
-    visibility: hidden;
-    animation-name: part2Scene1;
-    animation-duration: 3s;
-
-}
-#part2Scene1BG img{
-    position: absolute;
-    height: 800px;
-    width: 1200px;
-    left: -200px;
-    animation-name: part2Scene1BGPan;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-}
-
-
-#part2Scene1Text1{
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    text-align: left;
-    word-wrap:normal;
-    font-size: 40px;
-    top: 100px;
-    left: 20px;
-    text-shadow: 2px 2px 4px white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-
-/*Scene 2*/
-#part2Scene2{
-    visibility: hidden;
-    animation-name: part2Scene2;
-    animation-duration: 4.5s;
-    animation-delay: 2s;
-}
-
-#part2Scene2BG img{
-    position: absolute;
-    height: 800px;
-    width: 1200px;
-    left: 400px;
-    animation-name: part2Scene2BGPan;
-    animation-duration: 4.5s;
-    animation-delay: 2s;
-    animation-timing-function: linear;
-}
-#part2Scene2Text1{
-   
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    text-align: left;
-    word-wrap:normal;
-    font-size: 40px;
+#lodge6,#lodge6Details{
     top: 200px;
-    left: 20px;
-    text-shadow: 2px 2px 4px white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
+    left: 290px;
+}
+#lodge7,#lodge7Details{
+    top: 320px;
+    left: 290px;
 }
 
-/*Scene 3*/
-#part2Scene3{
-    visibility: hidden;
-    animation-name: part2Scene3;
-    animation-duration: 4s;
-    animation-delay: 5.5s;
+#lodge8, #lodge9{
+    width: 150px;
+    height: 150px;  
+    line-height: 150px;
 }
-
-#part2Scene3BG img{
-    position: absolute;
-    height: 800px;
-    width: 1200px;
-    left: 400px;
-    animation-name: part2Scene3BGPan;
-    animation-duration: 4s;
-    animation-delay: 5.5s;
-    animation-timing-function: linear;
-    
+#lodge8,#lodge8Details{
+    left: 320px;
+    top: 2px;
 }
-
-#part2Scene3Text1{
-
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    text-align: left;
-    word-wrap:normal;
-    font-size: 40px;
+#lodge9,#lodge9Details{
+    left: 470px;
+    top: 440px;
+}
+#lodge10{
+    left: 470px;
     top: 220px;
-    left: 20px;
-    text-shadow: 2px 2px 4px white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
+    height: 200px;
+    width: 180px;
+    line-height: 200px;
+    
+}
+#lodge10Details{
+    left: 470px;
+    top: 220px;
 }
 
-/*Scene 4*/
-#part2Scene4{
+.lodgeDetails{
+    position: absolute;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    border:  ridge 4px black;
+    width: 300px;
+    height: 400px; 
     visibility: hidden;
-    animation-duration: 6.5s;
-    animation-delay: 9s;
-    animation-name: part2Scene4;
- 
-}
-#part2Scene4BG{
-    position: absolute;
-    height: 800px;
-    width: 400px;
-    left: 400px;
-    background-color: orangered;
-
-    animation-name: part2Scene4BGPan;
-    animation-duration: 6.5s;
-    animation-delay: 9s;
-    animation-timing-function: linear;
-
+    pointer-events: none;
+    box-shadow: 2px 2px 2px 2px;
 }
 
-#part2Scene4Text1{
-    position: absolute;
-    width: 400px;
-    height: 100px;
-    text-align: left;
-    word-wrap:normal;
-    font-size: 60px;
-    top: 180px;
-    left: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    opacity: 0;
-    animation-name: part2Scene4TextFadeIn;
-    animation-duration: 5s;
-    animation-delay: 10s;
-}
-
-#part2Scene4Text2{
-    position: absolute;
+.lodgeDetails img{
     width: 250px;
     height: 200px;
-    text-align: left;
-    word-wrap:normal;
-    font-size: 60px;
-    top: 240px;
-    left: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    opacity: 0;
-    animation-name: part2Scene4TextFadeIn;
-    animation-duration: 5s;
-    animation-delay: 10s;
-    color: white;
-}
-
-#part2Scene4Text3{
-    position: absolute;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    word-wrap:normal;
-    font-size: 20px;
-    top: 730px;
-    left: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    opacity: 0;
-    animation-name: part2Scene4TextFadeIn;
-    animation-duration: 4s;
-    animation-delay: 11s;
-    color: white;
-    background-color: black;
-    line-height: 40px;
-    vertical-align: middle;
-}
-
-#part2Logo img{
-    position: absolute;
-    height: 50px;
-    width: 150px;
-    top: 700px;
-    left: 250px;
-}
-/* Replay button and ID*/
-#part2Replay{
-    visibility: visible;
-    animation-name: part2Replay;
-    animation-duration: 15s;
-}
-#part2ReplayButton{
-    position: absolute;
-    left: 150px;
-    top: 350px;
-    font-size: 50px;
-}
-#part2NameID{
-    position: absolute;
-    left: 100px;
-    font-size: 20px;
-    
-
-}
-
-/*Animations
-    Scene 1*/
-@keyframes part2Scene1 {
-    0%{
-        visibility: visible;
-    }
-    95%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-@keyframes part2Scene1BGPan{
-    0%{
-        transform: translateX(0px);
-    }   
-    100%{   
-        transform: translateX(-100px);
-    }
-}
-
-/* Scene 2*/
-@keyframes part2Scene2 {
-    0%{
-        visibility: visible;
-    }
-    95%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-
-
-@keyframes part2Scene2BGPan {
-    0%{
-        left: 400px;
-    }15%{
-        left: 0px;
-    }  
-    100%{   
-        left: -100px
-    }
-}
-/*Scene 3 */
-@keyframes part2Scene3 {
-    0%{
-        visibility: visible;
-    }
-    95%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
-}
-
-@keyframes part2Scene3BGPan {
-    0%{
-        left: 400px;
-    }15%{
-        left: 0px;
-    }  
-    100%{   
-        left: -100px
-    }
-}
-/*Scene 4*/
-@keyframes part2Scene4 {
-    0%{
-        visibility: visible;
-    }
-       
-    100%{
-        visibility: visible;
-    }
-}
-
-@keyframes part2Scene4BGPan {
-    0%{
-        left: 400px;
-    }5%{
-        left: 0px;
-    }  
-    100%{   
-        left: 0px
-    }
-}
-@keyframes part2Scene4TextFadeIn {
-    0%{
-        opacity: 0;
-    }20%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-    }
-    
-}
-/* Replay button and ID*/
-@keyframes part2Replay {
-    0%{
-        visibility: hidden;
-    }99%{
-        visibility: hidden;
-    }100%{
-        visibility: visible;
-    }
-    
-}
-/* --------------------------------Part 3----------------------------------- */
-#formContainer{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    height: 650px;
-    width: 700px;
-    text-align: center;
-    box-shadow: 2px 2px 4px darkgray;
-}
-#formContainer .row{
-    float: left;
-    padding: 8px 8px 2px 0px;
-    width: 100%;
-    
-    
-}
-#formContainer .half-row{
-    float: left;
-    padding: 8px 8px 8px 8px;
-    width: 50%;
-    
-}
-#formContainer .right-half-row{
-    float: right;
-    padding: 8px 8px 8px 8px;
-    width: 50%;
-    
-}
-#formContainer .quarter-row{
-    float: left;
-    padding: 8px 8px 2px 0px;
-    width: 25%;
-    
-}
-#formContainer .quarter-row-right{
-    float: left;
-    padding: 8px 8px 2px 0px;
-    width: 25%;
-    
-}
-#bookingSummary{
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    box-shadow: 2px 2px 4px darkgray;
-    
-    height: 400px;
-
-}
-.next {
-    float: right;
-}
-.previous {
-    float :left;
-}
-#formContainer button{
-    margin: 4px;
-    width: 20%;
-}
-progress {
-    width: 70%;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-#formSubTitle{
-    
-    font-size: 40px;   
-}
-label input[type="text"] {
-    width: 50%;
-    margin-right: 25%;
-    float: right;
-}
-label input[type="datetime-local"] {
-    width: 50%;
-    margin-right: 25%;
-    float: right;
-}
-label input[type="range"] {
-    width: 50%;
-    margin-right: 25%;
-    float: right;
-}
-label input[type="number"] {
-    
-    margin-right: 25%;
-    float: right;
-}
-label input[type="checkbox"] {
-    margin-left: 25%;
-    float: left;
-}
-.formNavigation {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    background-color:lightsteelblue;
-    width: 100%;
-}
-#conservationAgreement{
-    margin-left: 10%;
-    margin-right: 10%;
-    border-style: dashed;
-}
-#inputEquipment{
-    text-align: left;
-    margin-left: 10%;
-}
-#cookingInput{
-    width: 50%;
-    margin: auto;
-    text-align: left;
-}
-#emailInput{
-    margin-top: 5%;
-}
-#equipmentSummary{
-    margin: auto;
-    width: 70%;
-    
-}
-#goggleColour{
-    float: right;
-    width: 20px;
-    height: 15px;
-    margin: 2px;
-    border: black;
-    border-width: 1px;
-    border-style: solid;
-    
-}
-#equipmentSummary table{
-    border: solid black 1px;
-    float: right;
-}
-#equipmentSummary td{
-   border-bottom: black solid 2px;
-}
-#cookingSummary legend{
-    font-weight: bold;
-}
-#formPage5 h2{
-    font-size: 30px;
-    color: dimgray;
-}
-#inputDate {
+    margin-left: 20px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 2px lightgray;
    
-    height: 100px;
-    width: 90%;
-    margin: auto;
+}
+
+.lodgeDetails .row{
+    width: 100%;
+    float: left;
+    margin-left: 20px;
+}
+  
+#summaryPictureContainer img{
+    width: 500px;
+    height: 400px;
+    box-shadow: 5px 5px 2px lightgray;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#summaryForm{
+    text-align: center;
+    font-size: 25px;
+    line-height: 150%;
+    
+}
+#summaryLodgeDetails{
+    width: 400px;
+    height: auto;
+    border-radius: 1em;
+    margin-left: 70px;
+    box-shadow: 5px 5px 2px lightgray;
+    text-align: center;
+    font-size: 30px;
+    line-height: 200%;
+}
+
+#summaryForm button{
+    width: 30%;
+    height: 30px;
+    background-color:aquamarine;
+    color: black;
 }

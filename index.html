@@ -1,336 +1,118 @@
-<!--https://pixabay.com/photos/woman-man-kitchen-food-preparation-1979272/
-    https://pixabay.com/photos/architecture-interior-furniture-1171462/
-    https://pixabay.com/photos/kitchen-interior-design-room-home-1940174/ 
-    https://www.clipartmax.com/max/m2i8i8Z5d3Z5i8G6/
-    https://www.piha.co.nz/wp-content/uploads/2010/10/ISA-World-Junior-Surfing-2.jpg
-    https://www.piha.co.nz/wp-content/uploads/2010/10/Lion-Rock-1.jpg
-
--->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4a942585dd.js" crossorigin="anonymous"></script>
+    <title>Project 2</title>
 </head>
+
 <body>
-    <div id="page">
-    <section id="part1">
-        <a href="http://www.piha.co.nz/" target="_blank">
-        <div id="part1Wrapper">
-            <div id="nameID">
-                <div id="part1Name">Laura Baker</div>
-                <div id="part1ID">ID: 1583953</div>
-
-            </div>
-            <div id="part1Scene2">
-                <div id="part1Scene2Background">
-                    <img src="./ISA-World-Junior-Surfing-2.jpg" alt="Surfers" >
-                    <div id="part1Scene2Text1">Piha</div>
-                    <div id="part1Scene2Text2">Exciting</div>
-                    <div id="part1Scene2Text3">Massive Waves</div>
-
-                </div>               
-            </div>          
-            <div id="part1Scene1">
-                <div id="part1Scene1Background">
-                    <img src="./Lion-Rock-1.jpg" alt="Lion Rock">
-                </div>
-                <div id="part1Scene1Text1">Piha</div>
-                <div id="part1Scene1Text2">Breath-Taking</div>
-                <div id="part1Scene1Text3">Lion Rock</div>   
-
-            </div>
-            <div id="partTransitionScene">
-                <div id="part1TransitionSceneBG">
-                    <img src="./wave2.png" alt="Wave Graphic">
-                </div>
-            </div>
-            
+    <main>
+        <div id="titleBG" >
+            <h1>Resort Park Adventure</h1>
         </div>
-        </a>
-    </section>
-    <section id="part2">
-        
-        <div id="part2Wrapper">
+        <nav id="navBar">
+            <ul>
+                <li><a href="/index.html">Book Resort Park</a></li>
+                <li><a href="/gameindex.html">Game</a></li>
+                <li><a href="/Index Wireframe.drawio.pdf">Index Wireframe</a></li>
+                <li><a href="/Part 1 Wireframe.drawio.pdf">Booking System Wireframe</a></li>
+                <li><a href="/lodges.xml">Lodges XML</a></li>
+                <li><a href="/lodges.xsd">Lodges XSD</a></li>
+                <li><a href="">Game Wireframe</a></li>
+                <li><a href="">Game Storyboards</a></li>
+           
+            </ul>
             
 
-            <div id="part2Scene1">
-                <div id="part2Scene1BG">
-                    <img src="./woman-1979272_1280.jpg" alt="Kitchen Scene 1">
-                </div>
-                <div id="part2Scene1Text1">Create your dream kitchen</div>
-            </div>
+        </nav>
+        <section id="part1">
+            <h1>Book a Lodge</h1>
 
-            <div id="part2Scene2">
-                <div id="part2Scene2BG">
-                    <img src="./architecture-1171462_1280.jpg">
-                </div>
-                <div id="part2Scene2Text1">On trend</div>
-            </div>
+            <div id="bookingForm">
 
-            <div id="part2Scene3">
-                <div id="part2Scene3BG">
-                    <img src="./kitchen-1940174_1280.jpg" alt="">
-                </div>
-                <div id="part2Scene3Text1">And on budget</div>
-            </div>
-
-            <div id="part2Scene4">
-                <div id="part2Scene4BG"></div>
-                <div id="part2Scene4Text1">Explore our</div>
-                <div id="part2Scene4Text2">kitchen range</div>
-                <div id="part2Scene4Text3">FIND OUT MORE</div>             
-            </div>
-            <div id="part2Replay">
-                <div id="part2ReplayButton">
-                    <i class="fa-solid fa-backward" onclick="replayButton()"></i>
-                </div>
-
-            </div>
-            <a href="https://www.mitre10.co.nz" target="_blank">
-            <div id="part2Logo">
-                <img src="./logo.png" alt="Mitre 10 Logo">
-                
-            </div>
-            </a>
-            <div id="part2NameID">Laura Baker  ID: 1583953</div>
-            
-            
-        </div>
-        <script src="./part2.js"></script>
-        
-    </section>
-    <section id="links">
-        <div id="linksTable">
-            <table>
-                <thead><th>Description</th><th>Link</th></thead>
-                <tr>
-                    <td>Index Page Wireframe</td>
-                    <td><a href="./Index wireframe.drawio.pdf">Click</a></td>
-                </tr>
-                <tr>
-                    <td>Part 1 StoryBoard</td>
-                    <td><a href="./part1StoryBoard.pdf">Click</a></td>
-                </tr>
-                <tr>
-                    <td>Part 2 StoryBoard</td>
-                    <td><a href="./part2StoryBoard.drawio.pdf">Click</a></td>
-                </tr>
-                <tr>
-                    <td>Part 3 Wireframe</td>
-                    <td><a href="./part3 WireFrame.drawio.pdf">Click</a></td>
-                </tr>
-                
-            </table>
-        </div>
-    </section>
-    <section id="part3">
-        <div id="formContainer">
-            <div class="row"><subtitle id="formSubTitle">Book a Stay</subtitle></div>
-            <progress value="0" max="4"></progress>
-
-
-            <div id="formPage1" style="display:block">             
-
-                <div id="inputName">
-                    <label for="firstName" class="row">
-                        First Name:
-                        <input type="text" id="firstName">
+                <form id="inputForm">
+                    <h3 class="row">Please complete the following to make a Booking.</h3>
+                    <label class="row" for="checkIn">Check In
+                        <input type="date" name="checkIn" id="checkIn">
                     </label>
-                    <label for="lastName"  class="row">
-                        Last Name:
-                        <input type="text" id="lastName">
+                    <label class="row" for="checkOut">Check Out
+                        <input type="date" name="checkOut" id="checkOut">
                     </label>
-                </div>
-
-                <div id="inputDate">
-                    <label for="startDate" class="row">
-                            Please select arrival date
-                        <input type="datetime-local" name="startDate" id="startDate">
+                    <label class="row" for="numberStaying">Number Staying
+                        <input type="number" name="numberStaying" id="numberStaying" min="1" max="8" value="1">
                     </label>
-                    <label for="leaveDate" class="row">
-                        Please select departure date
-                        <input type="datetime-local" name="leaveDate" id="leaveDate">
-                    </label>
-                </div>
-                
-                <fieldset id="conservationAgreement">
-                    <legend>Do you argee with the local native conservation initiative agreement?
-                    </legend>
-                    <label for="agree" >
-                        Agree
-                        <input type="radio" name="conservationAgreement" id="agree" value="Agree">
+                    <div class="row" id="lodgeNumber">
+                    </div>
+                    <p class="row" id="totalCost">Total Cost</p>
+                    <button type="button" id="bookingSubmit">Make Booking</button>
+                    <ul>
+                        <strong>How to make a lodge booking:</strong> 
+                        <li>Select a Check In and Check Out Date</li>
+                        <li>Enter the number of people staying (up to 8)</li>
+                        <li>Hover over a lodge on the Map to see cost and a picture</li>
+                        <li>Click a lodge to select it</li>
+                        <li>If you are happy with your selections click Make Booking</li>
                         
-                    </label>
-                    <label for="disagree">
-                        Disagree
-                        <input type="radio" name="conservationAgreement" id="disagree" value="Disagree" checked="true">
-                        
-                    </label>
-                </fieldset>
+                    </ul>
+                </form>
+                <form id="summaryForm" style="display: none;">
+                    <h3 class="row">Booking Summary</h3>
+                    <div class="row" id="summaryArrivalDate"></div>
+                    <div class="row" id="summaryLeaveDate"></div>
+                    <div class="row" id="summaryPartySize"></div>
+                    <div class="row" id="summaryTotalCost"></div>
 
-                <div class="formNavigation">
-                    <button class="next" type="button" onclick="showPage(2)">
-                        Next
-                    </button>
-                </div>
+                    <button type="button" id="confirmBookingButton">Confirm Booking</button>
+                    <button type="button" id="returnButton">Return</button>
+
+                </form>
             </div>
 
+            <div id="map">
+                <img src="/map.jpg" id="mapimg">
+                <div id="lodge1" class="icon">1</div>
+                <div id="lodge2" class="icon">2</div>
+                <div id="lodge3" class="icon">3</div>
+                <div id="lodge4" class="icon">4</div>
+                <div id="lodge5" class="icon">5</div>
+                <div id="lodge6" class="icon">6</div>
+                <div id="lodge7" class="icon">7</div>
+                <div id="lodge8" class="icon">8</div>
+                <div id="lodge9" class="icon">9</div>
+                <div id="lodge10" class="icon">10</div>
 
-
-            <div id="formPage2" style="display:none">
-                
-                <div id="inputRoomType" class="row">
-                    <label for="roomType">
-                    Select Room Type:
-                        <select>
-                            <option value="Dormitory">Dormitory</option>
-                            <option value="Cabin">Cabin</option>
-                            <option value="Single-Room">Single-Room</option>
-                            <option value="2R1B">2R1B</option>
-                            <option value="3R2B">3R2B</option>
-                            <option value="Pent-House">Pent-House</option>
-                        </select>
-                     </label>
+                <div id="lodge1Details" class="lodgeDetails">1</div>
+                <div id="lodge2Details" class="lodgeDetails">2</div>
+                <div id="lodge3Details" class="lodgeDetails">3</div>
+                <div id="lodge4Details" class="lodgeDetails">4</div>
+                <div id="lodge5Details" class="lodgeDetails">5</div>
+                <div id="lodge6Details" class="lodgeDetails">6</div>
+                <div id="lodge7Details" class="lodgeDetails">7</div>
+                <div id="lodge8Details" class="lodgeDetails">8</div>
+                <div id="lodge9Details" class="lodgeDetails">9</div>
+                <div id="lodge10Details" class="lodgeDetails">
                 </div>
-                <div id="inputNumberStaying">
-                    <label for="adultsStaying" class="row">
-                        Number of adults staying: <output id="adultsOutput" for="adultsStaying"></output>
-                        <input type="range" name="adultsStaying" id="adultsStaying" min="1" max="10" value="1">
 
-                    </label>
-                    <label for="childrenStaying" class="row">
-                        Number of children staying: <output id="childrenOutput" for="childrenStaying"></output>
-                        <input type="range" name="childrenStaying" id="childrenStaying" min="0" max="10" value="0">
+            </div>
+            <div id="summaryPicture" style="display: none;">
+                <div id="summaryPictureContainer"></div>
+                <div id="summaryLodgeDetails">
+                    <div id="summaryLodgeNumber" class="row"></div>
+                    <div id="summaryLodgeCapacity" class="row"></div>
+                    <div id="summaryLodgeCost" class="row"></div>
+                </div>
 
-                    </label>
-                   
-                </div>
-                <div class="formNavigation">
-                    <button class="previous" type="button" onclick="showPage(1)">
-                        Back
-                    </button>
-                    <button class="next" type="button" onclick="showPage(3)">
-                        Next
-                    </button>
-                </div>
             </div>
 
-
-            <div id="formPage3" style="display:none">
-             
-                <div id="inputEquipment">
-                    <label for="surfBoards" class="row">Surf Boards
-                        <input type="number" name="surfBoards" id="surfBoards" min="0" max="10" value="0">
-
-                    </label>
-                    <label for="umbrella" class="row">Beach Umbrellas
-                        <input type="number" name="umbrella" id="umbrella" min="0" max="3" value="0">
-
-                    </label>
-                    <label for="towels" class="row">Towels
-                        <input type="number" name="towels" id="towels" min="0" max="20" value="0">
-
-                    </label>
-                    <label for="goggles" class="row">Swimming Goggles
-                        <input type="number" name="goggles" id="goggles" min="0" max="20" value="0">
-                    </label>
-                    <label for="gogglesColor" class="row">
-                        Please select which colour Goggles you would like:
-                        <input type="color" name="gogglesColor" id="gogglesColor">
-                    </label>    
-
-                    </label>
-                </div>
-                <div class="formNavigation">
-                    <button class="previous" type="button" onclick="showPage(2)">
-                        Back
-                    </button>
-                    <button class="next" type="button" onclick="showPage(4)">
-                        Next
-                    </button>
-                </div>
-            </div>
+        </section>
+    </main>
 
 
-            <div id="formPage4" style="display:none">
-               
-                <fieldset id="cookingInput">
-                    <legend>Please check what cooking facilities you require</legend>
-                    <label for="gas" class="row">
-                        <input type="checkbox" name="gas" id="gas" value="Gas StoveTop">
-                        Gas Stovetop
-                    </label>
-                    <label for="BBQ" class="row">
-                        <input type="checkbox" name="BBQ" id="BBQ" value="BBQ">
-                        BBQ
-                    </label>
-                    <label for="oven" class="row">
-                        <input type="checkbox" name="oven" id="oven" value="Oven">
-                        Oven
-                    </label>
-                    <label for="microwave" class="row">
-                        <input type="checkbox" name="microwave" id="microwave" value="Microwave">
-                        Microwave
-                    </label>
-
-                </fieldset>
-                <div id="emailInput">
-                    <label for="email"> Please enter your email:
-                        <input type="email" name="email" id="email" required>
-                    </label>
-                </div>
-                    
-                
-                <div class="formNavigation">
-                    <button class="previous" type="button" onclick="showPage(3)">
-                        Back
-                    </button>
-                    <button class="next" type="button" onclick="showPage(5)">
-                        Submit
-                    </button>
-                </div>
-            </div>
-
-
-            <div id="formPage5" style="display:none">
-                <h2>Summary</h2>
-                <div id="bookingSummary">
-                    <div class="row">
-                        <div class="quarter-row">Name: <span id="summaryName"></span></div>
-                        <div class="quarter-row-right">Email: <span id="summaryEmail"></span></div>
-                        <div class="half-row-right">Duration of stay: <span id="summaryStay"></span></div>
-                    </div>
-                    <div class="row">
-                        <div class="half-row">Room booked: <span id="summaryRoom"></span></div>
-                        <div class="half-row-right"><span id="summaryGuests"></span></div>
-                    </div>
-                    <div class="row">
-                    <div class="half-row" id="cookingSummary"></div>  
-                    <div class="half-row-right"><div id="equipmentSummary"></div></div>
-                    </div>
-                    <div class="row"><span id="agreementSummary"></span></div>
-                </div>
-                <div class="formNavigation">
-                    <button class="previous" type="button" onclick="showPage(1)">
-                        Back to Start
-                    </button>
-                    
-                </div>
-            </div>
-        
-        </div>
-        
-        <script src="./form.js"></script>
-    </section>
- </div>  
-
-   
-    
-
+    <script src="script.js"></script>
 </body>
+
 </html>
